@@ -1,0 +1,29 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .mat-sidenav{
+    background: yellow;
+    width:200px;
+  }
+  .mat-sidenav-content{
+    background: rgb(156, 156, 156);
+  }
+  .mat-sidenav-container{
+      position: relative;
+      height: 100%;
+  }
+
+  @media only screen and (min-width: 768px) {
+      .mobile{
+        display:none;
+      }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .desktop{
+      display:none;
+    }
+}
+
