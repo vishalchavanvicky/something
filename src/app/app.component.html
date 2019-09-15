@@ -1,21 +1,69 @@
 
 <!-- <app-main-nav></app-main-nav> -->
 
-<mat-sidenav-container class="example-container" [hasBackdrop]="true">
+<mat-sidenav-container  [hasBackdrop]="true">
   <mat-sidenav mode="side" position="end"  [(opened)]="opened">
     Sidenav content
 
   </mat-sidenav>
   <mat-sidenav-content>
-      <mat-toolbar color="primary">
-          <span>SomeThing</span>
-          <mat-icon style="right:30px;position: absolute;cursor:pointer" class="mobile" (click)="opened=!opened">menu </mat-icon>
-          <span style="float:right;position: relative;" class="desktop">
-              <a style="margin:0 20px" href="#">Link 1</a>
-              <a style="margin-right:20px" href="#">Link 2</a>
-              <a href="#">Link 3</a>
+      <mat-toolbar class="example-container" color="primary">
+          <span>JustSwipeNews</span>
+          <mat-icon style="right:30px;position: fixed;cursor:pointer" class="mobile" (click)="opened=!opened">menu </mat-icon>
+          <span style="float:right;position: fixed;right:5%" class="desktop">
+              <a class="navLink" href="#">Home</a>
+              <a class="navLink" href="#">Services</a>
+              <a class="navLink" href="#">Careers</a>
+              <a class="navLink" href="#">About Us</a>
           </span>
       </mat-toolbar>
+      
+      <router-outlet></router-outlet>  
+    <footer>
+      <div class="footerClass ">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">      
+               <span class="footerHeaderLink">Categories</span><br><br>
+               <div class="mobile-center">
+                 <a href="#">Business</a><br> 
+                 <a href="#">Sports</a><br>
+                 <a href="#">BollyWood</a><br>
+                 <a href="#">Health & Fitness</a><br>
+                 <a href="#">Politics</a><br><br>
+                 </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">      
+              <span class="footerHeaderLink">Trending</span><br><br>
+              <div class="mobile-center">
+                <a href="#">Arijit Singh</a><br> 
+                <a href="#">Modi Sarkar</a><br>
+                <a href="#">Virat Kohli</a><br>
+                <a href="#">Amazon Forest</a><br>
+                <a href="#">Engineers Day</a><br></div>
+         </div>
+          
+          <div class="col-lg-3 col-md-6 col-sm-6">
+                <span class="footerHeaderLink">Quick Links</span><br><br>
+                <div class="mobile-center">
+                <a href="#">Home</a><br>
+                <a href="#">Services</a><br>
+                <a href="#">Testimonial</a><br>
+                <a href="#">Careers</a><br>
+                <a href="#">About Us</a><br></div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <span class="footerHeaderLink">Address</span><br><br>
+              <div class="mobile-center">
+              <p>201,203, Suren Rd, Gundavali,<br> Andheri East, Mumbai, <br>Maharashtra 400053</p></div>
+          </div>
+         </div>
+        </div>
+
+        <div class="footerCopyright text-center">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/angular/"> JustSwipeNews.com</a>
+        </div>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

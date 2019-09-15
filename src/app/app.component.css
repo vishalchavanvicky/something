@@ -1,5 +1,5 @@
 .example-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1;
   }
@@ -8,17 +8,35 @@
     width:200px;
   }
   .mat-sidenav-content{
-    background: rgb(156, 156, 156);
+    /* background: rgb(255, 255, 255); */
   }
   .mat-sidenav-container{
       position: relative;
       height: 100%;
   }
+  .navLink{
+    margin:0 40px;
+    color:white;
+    text-decoration: none;
+  }
+  .footerClass{
+    background:rgba(240, 255, 149, 0.952);
+    padding: 3% 3% 3% 5%;
+  }
+  .footerCopyright{
+    background: rgb(232, 138, 255);    
+  }
+  .footerHeaderLink{
+    font-size: 18px;
+    color:red;
+    font-weight: bold;
 
+  }
   @media only screen and (min-width: 768px) {
       .mobile{
         display:none;
       }
+
   }
 
   @media only screen and (max-width: 767px) {
@@ -27,3 +45,8 @@
     }
 }
 
+@media (min-width: 0px) and (max-width: 400px) {
+  .mobile-center{
+    text-align:center;
+  }
+}
