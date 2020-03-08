@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ServiceComponent } from './service/service.component';
 
 
 
@@ -19,6 +20,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     HomeComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,MatSidenavModule,MatToolbarModule,MatIconModule,
