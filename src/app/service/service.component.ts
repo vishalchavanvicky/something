@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConstantPool } from '@angular/compiler';
 
 @Component({
   selector: 'app-service',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
+
+  fileName :any;
+  filesPush : File[] = [];
+  selectedfiles :[];
 
   constructor() { }
 
@@ -26,8 +31,15 @@ export class ServiceComponent implements OnInit {
 
   onDrop(event){
     event.preventDefault();
-    let file;
-    file = event.dataTransfer.files
+    let maxFiles = 10;
+    this.selectedfiles = event.dataTransfer.files;
+    if(this.filesPush.length + this.selectedfiles.length <= maxFiles){
+      for(let i=0; i<this.selectedfiles.length; i++){
+        this.filesPush.push(this.selectedfiles[i]);
+      }
+    }else
+    alert("Nikal Files")
+
   }
 
   dragover(event){

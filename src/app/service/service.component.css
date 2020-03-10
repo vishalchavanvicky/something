@@ -1,5 +1,31 @@
 #target{
-    height:50%;
-    width:50%;
+    margin: 10%;
+    border: dotted 2px lightseagreen;
     background-color: rgb(247, 224, 195);
+}
+
+#mainBlock{
+    height: 80%;
+    margin: 2%;
+    padding: 1%;
+    background-color: rgba(233, 233, 86, 0.5);
+}
+
+.rightBlock{
+    height: 70%;
+    border-right:dotted 1px red
+}
+
+.rowDimensions{
+
+}
+
+#submitSection{
+
+}
+
+
+
+.leftBlock{
+
 }

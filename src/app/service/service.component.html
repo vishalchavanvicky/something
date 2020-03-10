@@ -1,5 +1,25 @@
-<p>service works!</p>
+<!-- <div class="container"></div> -->
 
-<p>ADD FILES</p>
-    <div id="target" (dragenter)="dragEnter($event)" (drop)="onDrop($event)" (dragover)="dragover($event)" (dragleave)="dragLeave($event)">
+<div id="mainBlock">
+    <div class="row rowDimensions">
+        <div class="col">
+             <!-- ************************************************************ -->
+             <p>ADD FILES</p>
+            <div class="rightBlock">
+                <div id="target" (dragenter)="dragEnter($event)" (drop)="onDrop($event)" (dragover)="dragover($event)"
+                    (dragleave)="dragLeave($event)">
+                    <p *ngFor="let file of filesPush">{{file.name}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col leftBlock">
+            <p>ADD FOLDER</p>
+            <!-- <div id="target" (dragenter)="dragEnter($event)" (drop)="onDrop($event)"
+                (dragover)="dragover($event)" (dragleave)="dragLeave($event)"></div> -->
+        </div>
+
+    </div>
+
 </div>
+<div id="submitSection"></div>
